@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./imgs/favicon.ico" />
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Chat UOL</title>
+</head>
+<body>
+
+<main> 
+    <section class="header">
+        <img src="./imgs/logo 1.png"/>
+        <ion-icon name="people" onclick="showMenu(this)"></ion-icon>
+    </section>
+
+    <section class="messages">
+        <p>message text</p>
+        <p>message text</p>
+        <p>message text</p>
+    </section>
+
+    <section class="send-message">
+        <input type="text" placeholder="Escreva aqui...">
+        <ion-icon name="paper-plane-outline"></ion-icon>   
+    </section>
+</main>
+
+<aside id="side-panel">
+    <div class="contacts">
+        <span><h2>Escolha um contato para enviar mensagem</h2></span>
+        <ul>
+            <span><ion-icon name="people"></ion-icon><p>Todos</p></span>
+            <span><ion-icon name="person-circle"></ion-icon><p>nome1</p></span>
+            <span><ion-icon name="person-circle"></ion-icon><p>nome2</p></span>
+        </ul>
+    </div>  
+    
+    <div>
+        <span><h2>Escolha a visibilidade</h2></span>
+        <ul>
+            <span><ion-icon name="lock-open"></ion-icon><p>Público</p></span>
+            <span><ion-icon name="lock-closed"></ion-icon><p>Reservadamente</p></span>
+        </ul>
+    </div>
+
+    <ion-icon class="return" name="chevron-forward" onclick="showMenu()"></ion-icon> 
+
+</aside>   
+
+<script type="text/javascript" src="./js/script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
