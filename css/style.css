@@ -4,7 +4,6 @@
 }
 body{
     display: block;
-    background-color: bisque;
 }
 
 .header{
@@ -21,8 +20,12 @@ body{
     padding: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
 }
+
 .messages{
-    margin-top: 80px;    
+    height: 100%;
+    width: 100%;
+    margin-top: 80px;
+    background-color: #E7B137;    
 }
 .send-message{
     display: flex;
@@ -56,6 +59,10 @@ aside{
     font-size: 14px;
     transition: 0.5s ease;
 }
+aside ion-icon{
+    font-size: 26px;
+    margin: 0 5px;
+}
 aside span{
     background-color: azure;
     display: flex;
@@ -81,4 +88,69 @@ aside .return{
 }
 .active{
     right: 0;
+}
+
+.login-input,.login-screen{
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 15%;
+    background-color: #FFFFFF;
+}
+
+.login-input img{
+    margin-bottom: 60%;
+}
+.login-button{
+    text-align: center;
+}
+.login-button .type-here{
+    margin: 10px auto;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    border-radius: 6px;
+    color: #37352f;
+    border: 2px solid #e7e7e7;
+}
+.login-button .click-here{
+    height: 30px;
+    border-radius: 5px;
+    color: #37352f;
+    border: 2px solid #e7e7e7;
+    transition: 0.5s ease;
+}
+.login-button .click-here:hover{
+    background-color: #EFBB3C;
+    border-color: #E7B137;
+}
+.login-loading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+}
+.login-loading img{margin: 0;}
+
+.grayscale{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    overflow-y: hidden;
+    filter:brightness(45%) blur(1px);
+}
+.hide{
+    display: none;
 }
