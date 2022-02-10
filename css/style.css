@@ -24,8 +24,12 @@ body{
 .messages{
     height: 100%;
     width: 100%;
-    margin-top: 80px;
-    background-color: #E7B137;    
+    padding: 80px 0px;
+    background-color: #E7B137;
+    overflow-y: hidden;    
+}
+::-webkit-scrollbar{
+    display: none;
 }
 .send-message{
     display: flex;
@@ -58,6 +62,7 @@ aside{
     background-color: aquamarine;
     font-size: 14px;
     transition: 0.5s ease;
+    overflow-y: scroll;
 }
 aside ion-icon{
     font-size: 26px;
@@ -70,14 +75,15 @@ aside span{
     align-items: center;
 }
 aside h2{
-    margin: 10px 16%;
+    margin: 10px 25px;
     text-justify: center;
     text-align: center;
     font-size: 16px;
     font-weight: 700;
 }
+
 ul span{
-    margin-left: -20px;
+    margin: 0;
 }
 aside .return{
     font-size: 42px;
@@ -89,24 +95,27 @@ aside .return{
 .active{
     right: 0;
 }
+.contacts-list{
+    overflow-y: scroll;
+}
 
 .login-input,.login-screen{
     z-index: 2;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 15%;
+    padding: 30px;
     background-color: #FFFFFF;
 }
 
 .login-input img{
-    margin-bottom: 60%;
+    margin-bottom: 160px;
 }
 .login-button{
     text-align: center;
@@ -148,7 +157,6 @@ aside .return{
     left: 0;
     right: 0;
     top: 0;
-    overflow-y: hidden;
     filter:brightness(45%) blur(1px);
 }
 .hide{

@@ -20,9 +20,7 @@
     </section>
 
     <section class="messages">
-        <p>message text</p>
-        <p>message text</p>
-        <p>message text</p>
+
     </section>
 
     <section class="send-message">
@@ -47,23 +45,25 @@
 </main>
 
 <aside id="side-panel">
-    <div class="contacts">
-        <span><h2>Escolha um contato para enviar mensagem</h2></span>
-        <ul>
-            <span><ion-icon name="people"></ion-icon><p>Todos</p></span>
-            <span><ion-icon name="person-circle"></ion-icon><p>nome1</p></span>
-            <span><ion-icon name="person-circle"></ion-icon><p>nome2</p></span>
-        </ul>
-    </div>  
-    
+    <span><h2>Escolha a visibilidade</h2></span>
     <div>
-        <span><h2>Escolha a visibilidade</h2></span>
         <ul>
             <span><ion-icon name="lock-open"></ion-icon><p>Público</p></span>
             <span><ion-icon name="lock-closed"></ion-icon><p>Reservadamente</p></span>
         </ul>
     </div>
-
+    
+    <span><h2>Escolha um contato para enviar mensagem</h2></span>
+    <div class="contacts"> 
+        <ul>
+            <span><ion-icon name="people"></ion-icon>
+                <p>Todos</p>
+            </span>
+        </ul>
+        <ul class="contacts-list">
+           
+        </ul>
+    </div>  
     <ion-icon class="return" name="chevron-forward" onclick="showMenu()"></ion-icon> 
 
 </aside>   
@@ -71,6 +71,6 @@
 <script type="text/javascript" src="./js/script.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 </html>
