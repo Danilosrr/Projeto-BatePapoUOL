@@ -25,7 +25,7 @@ body{
     height: 100%;
     width: 100%;
     padding: 80px 0px;
-    background-color: #E7B137;
+    background-color: #FFFFFF;
     overflow-y: hidden;    
 }
 ::-webkit-scrollbar{
@@ -48,7 +48,31 @@ body{
 .send-message input{
     border:none;
     outline: none;
+    font-size: 18px;
+}
+.send-message input::placeholder{
+    color: black;
+}
+.send-message p{
+    color: #37352f;
+    font-size: 14px;
+}
+.message{width: 100%;
+word-wrap: break-word;
+}
+.message time{
+    font-size: 14px;
+    color: #AAAAAA;
+}
+.message strong{
     font-size: 16px;
+    font-weight: 600;
+    color: black;
+}
+.message text{
+    font-size: 14px;
+    font-weight: 400;
+    color: #1c1c1c;
 }
 
 aside{
@@ -59,17 +83,16 @@ aside{
     top: 0;
     right: -260px;
     bottom: 0;
-    background-color: aquamarine;
+    background-color: #FFFFFF;
     font-size: 14px;
     transition: 0.5s ease;
-    overflow-y: scroll;
 }
 aside ion-icon{
     font-size: 26px;
     margin: 0 5px;
 }
 aside span{
-    background-color: azure;
+    background-color: #FFFFFF;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -85,18 +108,20 @@ aside h2{
 ul span{
     margin: 0;
 }
-aside .return{
-    font-size: 42px;
-    margin:10px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
+
 .active{
     right: 0;
 }
 .contacts-list{
+    height: 360px;
+    width: 100%;
     overflow-y: scroll;
+}
+.visibility{
+    width: 100%;
+}
+span .check-icon{
+    margin-left: auto;
 }
 
 .login-input,.login-screen{
@@ -152,13 +177,18 @@ aside .return{
 .login-loading img{margin: 0;}
 
 .grayscale{
-    position: absolute;
+    display: flex;
+    z-index: 1;
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     top: 0;
-    filter:brightness(45%) blur(1px);
+    background-color: rgba(0, 0, 0, 0.55);
 }
 .hide{
     display: none;
+}
+.selected{
+    display: flex;
 }

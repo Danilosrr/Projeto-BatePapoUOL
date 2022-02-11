@@ -14,9 +14,10 @@
 <body>
 
 <main> 
+    <div class="grayscale hide" onclick="showMenu()"></div>
     <section class="header">
         <img src="./imgs/logo 1.png"/>
-        <ion-icon name="people" onclick="showMenu(this)"></ion-icon>
+        <ion-icon name="people" onclick="showMenu()"></ion-icon>
     </section>
 
     <section class="messages">
@@ -24,7 +25,10 @@
     </section>
 
     <section class="send-message">
-        <input type="text" placeholder="Escreva aqui...">
+        <div class="message-content">
+            <input class="message-text" type="text" placeholder="Escreva aqui...">
+            <p class="message-privacy">Enviando para Todos (Público)</p>
+        </div>
         <ion-icon name="paper-plane-outline"></ion-icon>   
     </section>
 
@@ -42,30 +46,33 @@
                 <p>Entrando...</p>
         </div>
     </section>
+    
 </main>
 
 <aside id="side-panel">
-    <span><h2>Escolha a visibilidade</h2></span>
-    <div>
-        <ul>
-            <span><ion-icon name="lock-open"></ion-icon><p>Público</p></span>
-            <span><ion-icon name="lock-closed"></ion-icon><p>Reservadamente</p></span>
-        </ul>
-    </div>
-    
     <span><h2>Escolha um contato para enviar mensagem</h2></span>
     <div class="contacts"> 
-        <ul>
-            <span><ion-icon name="people"></ion-icon>
-                <p>Todos</p>
-            </span>
-        </ul>
         <ul class="contacts-list">
            
         </ul>
     </div>  
-    <ion-icon class="return" name="chevron-forward" onclick="showMenu()"></ion-icon> 
 
+    <span><h2>Escolha a visibilidade</h2></span>
+    <div class="visibility">
+        <ul>
+            <span data-identifier="visibility" onclick="selectPrivacy(this)">
+                <ion-icon name="lock-open"></ion-icon>
+                <p>Público</p>
+                <ion-icon class="check-icon" name="checkmark"></ion-icon>
+            </span>
+
+            <span data-identifier="visibility" onclick="selectPrivacy(this)">
+                <ion-icon name="lock-closed"></ion-icon>
+                <p>Reservadamente</p>
+                <ion-icon class="check-icon hide" name="checkmark"></ion-icon>
+            </span>
+        </ul>
+    </div> 
 </aside>   
 
 <script type="text/javascript" src="./js/script.js"></script>
