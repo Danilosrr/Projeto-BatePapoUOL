@@ -97,28 +97,24 @@ function updateParticipants(){
 /*Rendering Functions*/
 function renderMessages(response){
     serverMessage=response.data;
-
+    let message=document.querySelector('.messages');
+    message.innerHTML=""
     for(let i=0;i<serverMessage.length;i++){
-        let message = document.createElement('div');
-        message.setAttribute('data-identifier', 'message');
-
+        
         if (serverMessage[i].type==='status'){    
-            message.setAttribute('class', 'message status');
             message.innerHTML += 
-            `<p><time>(${serverMessage[i].time}) <time><strong>${serverMessage[i].from} <strong><text>${serverMessage[i].text}<text><p>`;
+            `<p class="message status"><time>(${serverMessage[i].time}) <time><strong>${serverMessage[i].from} <strong><text>${serverMessage[i].text}<text><p>`;
         }else if(serverMessage[i].type==='message'){
-            message.setAttribute('class', 'message');
             message.innerHTML += 
-            `<p><time>(${serverMessage[i].time}) <time><strong>${serverMessage[i].from} <strong><text>para <text><strong>${serverMessage[i].to} </strong><text>${serverMessage[i].text}<text><p>`;
-        }else if(serverMessage[i].type==='private_message' && serverMessage[i].to===login.name){
-            message.setAttribute('class', 'message private');
+            `<p class="message public"><time>(${serverMessage[i].time}) <time><strong>${serverMessage[i].from} <strong><text>para <text><strong>${serverMessage[i].to} </strong><text>${serverMessage[i].text}<text><p>`;
+        }else if(serverMessage[i].type==='private_message' && (serverMessage[i].to===login.name || serverMessage[i].from===login.name)){
             message.innerHTML += 
-            `<p><time>(${serverMessage[i].time}) <time><strong>${serverMessage[i].from} <strong><text>para <text><strong>${serverMessage[i].to} </strong><text>${serverMessage[i].text}<text><p>`;
+            `<p class="message private"><time>(${serverMessage[i].time}) <time><strong>${serverMessage[i].from} <strong><text>para <text><strong>${serverMessage[i].to} </strong><text>${serverMessage[i].text}<text><p>`;
         }  
-
-        document.querySelector('.messages').appendChild(message);
-        document.querySelector(".messages").scrollIntoView(false);
+        
     }
+    
+    document.querySelector(".messages").scrollIntoView(false);
 };
 
 function renderparticipants(response){
@@ -157,12 +153,11 @@ function sendMessage() {
         const sendPromise = axios.post("https://mock-api.driven.com.br/api/v4/uol/messages", message)
         sendPromise.then(sendSuccessfully)
         sendPromise.catch(sendError)
-    }    
+    } 
 }
 
 function sendSuccessfully() {
     document.querySelector(".message-text").value=""
-    renderMessages()
 }
 function sendError(){
     window.location.reload()

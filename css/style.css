@@ -18,19 +18,17 @@ body{
     align-items: center;
     font-size: 42px;
     padding: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.125);
 }
 
 .messages{
     height: 100%;
     width: 100%;
     padding: 80px 0px;
-    background-color: #FFFFFF;
+    background-color: #F3F3F3;
     overflow-y: hidden;    
 }
-::-webkit-scrollbar{
-    display: none;
-}
+
 .send-message{
     display: flex;
     justify-content: space-between;
@@ -43,7 +41,7 @@ body{
     background-color: #FFFFFF;
     padding: 27px;
     font-size: 26px;
-    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.125);
 }
 .send-message input{
     border:none;
@@ -58,8 +56,12 @@ body{
     font-size: 14px;
 }
 
-.message{width: 100%;
-word-wrap: break-word;
+.message{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    word-wrap: break-word;
 }
 .message time{
     font-size: 14px;
@@ -76,12 +78,14 @@ word-wrap: break-word;
     color: #1c1c1c;
 }
 .status{
-    background-color: #DCDCDC;
+    background-color: #dcdcdc;
 }
 .private{
     background-color: #FFDEDE;
 }
-
+.public{
+    background-color: #FFFFFF
+}
 aside{
     display: block;
     z-index: 1;
