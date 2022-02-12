@@ -5,7 +5,9 @@
 body{
     display: block;
 }
-
+::-webkit-scrollbar{
+    display: none;
+}
 .header{
     display: flex;
     position: fixed;
