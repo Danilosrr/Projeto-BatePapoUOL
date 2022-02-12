@@ -57,6 +57,7 @@ body{
     color: #37352f;
     font-size: 14px;
 }
+
 .message{width: 100%;
 word-wrap: break-word;
 }
@@ -73,6 +74,12 @@ word-wrap: break-word;
     font-size: 14px;
     font-weight: 400;
     color: #1c1c1c;
+}
+.status{
+    background-color: #DCDCDC;
+}
+.private{
+    background-color: #FFDEDE;
 }
 
 aside{
@@ -189,6 +196,6 @@ span .check-icon{
 .hide{
     display: none;
 }
-.selected{
-    display: flex;
+.check-icon{
+    color: green;
 }
