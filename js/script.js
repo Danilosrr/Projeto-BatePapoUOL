@@ -132,7 +132,7 @@ function renderparticipants(response){
         if(serverParticipants[i].name !== login.name){
             participant.innerHTML +=`
                 <span data-identifier="participant" onclick="selectParticipants(this)">
-                    <ion-icon name="people"></ion-icon>
+                    <ion-icon name="person-circle"></ion-icon>
                     <p>${serverParticipants[i].name}</p>
                     <ion-icon class="check-icon hide" name="checkmark"></ion-icon>
                 </span>
